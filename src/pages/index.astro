@@ -1,0 +1,73 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Redes from "../components/Redes.astro";
+import Linkedin from "../components/icon/Linkedin.astro";
+import Github from "../components/icon/Github.astro";
+import Gmail from "../components/icon/Gmail.astro";
+import Experiencia from "../components/Experiencia.astro";
+import Maletin from "../components/icon/Maletin.astro";
+import Codigo from "../components/icon/Codigo.astro";
+import Proyectos from "../components/Proyectos.astro";
+---
+
+<Layout
+  title="Portfolio de Mauro Dordoni - Desarrollador y Programador Web"
+  description="Contrata a Mauro Dordoni. Creador de Páginas Web para pequeñas y medianas empresas"
+>
+  <main class="px-4">
+    <SectionContainer class="py-44 pb-32">
+      <img
+      class="rounded-full size-12 mb-4"
+      src="https://avatars.githubusercontent.com/u/74875962?v=4"
+      alt="Logo Mauro Dordoni"
+    />
+      <h1 class="text-white text-3xl lg:text-5xl md:text-4xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
+        Hola, soy Mauro!<a
+          href="https://www.linkedin.com/in/mauro-dordoni-43a134204/"
+          target="_blank"
+          rel="noopener"
+          class="flex justify-center items-center"
+        >
+          <Badge>Disponible para trabajar</Badge>
+        </a>
+      </h1>
+      <h2 class="text-xl lg:text-3xl text-wrap max-w-[700px]">
+        Desarrollador Full Stack de <span class="text-cyan-200/90">Mendoza, Argentina</span>. Me Especializo en crear
+        Páginas Web para pequeñas y medianas empresas.
+      </h2>
+
+      <nav class="flex gap-4 mt-8 flex-wrap">
+        <Redes href="https://www.linkedin.com/in/mauro-dordoni-43a134204/">
+          <Linkedin class="size-4 md:size-6" />
+          LinkedIn
+        </Redes>
+        <Redes href="https://github.com/MauroDordoni">
+          <Github class="size-4 md:size-6" />
+          GitHub
+        </Redes>
+        <Redes href="https://github.com/MauroDordoni">
+          <Gmail class="size-4 md:size-6" />
+          maurodordonii@gmail.com
+        </Redes>
+      </nav>
+    </SectionContainer>
+
+    <SectionContainer id="experiencia">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Maletin class="size-7" />
+        Experiencia Laboral</h2>
+      <Experiencia />
+    </SectionContainer>
+
+    <SectionContainer id="proyectos">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Codigo class="size-7" />
+        Proyectos</h2>
+        <Proyectos />
+    </SectionContainer>
+
+
+  </main>
+</Layout>

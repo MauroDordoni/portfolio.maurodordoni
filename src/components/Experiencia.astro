@@ -1,0 +1,29 @@
+---
+import ItemExperiencia from "./ItemExperiencia.astro"
+
+const EXPERIENCIA = [
+{
+    date: 'Junio 2024 - Actualidad',
+    title: 'Desarrollador Web Freelancer',
+    description: 'Me encargo de Realizar Páginas Web para pequeñas y medianas empresas por medio de páginas freelancer',
+},
+{
+    date: 'Junio 2023 - Diciembre 2023',
+    title: 'Asistente de una Consultora',
+    description: 'Me encargaba de contactar con las cooperativas de Argentina para enviar mails y formularios sobre cursos y demás cosas de las que se encargaba la consultora',
+}
+
+]
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700">    
+    {
+        EXPERIENCIA.map(experiencia => (
+            <li class="mb-10 ms-4">
+                <ItemExperiencia { ...experiencia} />
+            </li>
+        ))
+    }             
+    
+</ol>
+

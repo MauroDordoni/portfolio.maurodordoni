@@ -1,0 +1,61 @@
+---
+import ViteIcono from "../components/icon/ViteIcono.astro";
+import ReactIcono from "../components/icon/ReactIcono.astro";
+import TailwindIcono from "../components/icon/TailwindIcono.astro";
+
+
+const TAGS = {
+  REACT: {
+    name: "React",
+    class: "bg-black text-[#58C4DC]",
+    icon: ReactIcono,
+  },
+
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-[#003159] text-white",
+    icon: TailwindIcono,
+  },
+
+  VITE: {
+    name: "Vite",
+    class: "bg-[#bd34fe] text-white",
+    icon: ViteIcono,
+  }
+};
+
+const PROYECTOS = [
+  {
+    title: "Aplicación de Clima",
+    description: "Aplicación que muestra el Clima de cualquier parte del Mundo",
+    link: "https://appclimamd.netlify.app/",
+    github: "https://github.com/MauroDordoni/clima.app",
+    image: "/proyectos/proyecto1.webp",
+    tags: [TAGS.VITE, TAGS.REACT, TAGS.TAILWIND],
+  },
+];
+---
+
+{
+  PROYECTOS.map(({ image, title, description, tags }) => (
+    <article>
+      <h3 class="text-2xl font-semibold text-cyan-300 mb-2">{title}</h3>
+      <p class="text-lg mb-4 text-pretty">{description}</p>
+      <ul class="flex gap-x-2 flex-row mb-2">
+        {tags.map((tag) => (
+          <li>
+            <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}>
+            <tag.icon class="size-4" />
+            {tag.name}
+        </span>
+          </li>
+        ))}
+      </ul>
+      <img
+        class="rounded shadow-2xl shadow-orange-300/20"
+        src={image}
+        alt={`Captura de pantalla del Proyecto 1 ${image}`}
+      />
+    </article>
+  ))
+}
