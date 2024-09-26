@@ -10,6 +10,9 @@ import Experiencia from "../components/Experiencia.astro";
 import Maletin from "../components/icon/Maletin.astro";
 import Codigo from "../components/icon/Codigo.astro";
 import Proyectos from "../components/Proyectos.astro";
+import TitleSection from "../components/TitleSection.astro";
+import SobreMi from "../components/SobreMi.astro";
+import ProfileCheck from "../components/icon/ProfileCheck.astro";
 ---
 
 <Layout
@@ -47,7 +50,7 @@ import Proyectos from "../components/Proyectos.astro";
           <Github class="size-4 md:size-6" />
           GitHub
         </Redes>
-        <Redes href="https://github.com/MauroDordoni">
+        <Redes href="mailto:maurodordonii@gmail.com">
           <Gmail class="size-4 md:size-6" />
           maurodordonii@gmail.com
         </Redes>
@@ -66,6 +69,14 @@ import Proyectos from "../components/Proyectos.astro";
         <Codigo class="size-7" />
         Proyectos</h2>
         <Proyectos />
+    </SectionContainer>
+
+    <SectionContainer id="sobre-mi">
+      <TitleSection>
+        <ProfileCheck class="size-8" />
+        Sobre mí
+      </TitleSection>
+      <SobreMi />
     </SectionContainer>
 
 
