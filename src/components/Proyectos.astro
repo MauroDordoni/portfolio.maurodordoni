@@ -5,6 +5,7 @@ import Tailwind from "./icon/TailwindIcono.astro"
 import Link from "./icon/Link.astro"
 import LinkButton from "./LinkButton.astro"
 import WordpressIcono from "./icon/WordpressIcono.astro"
+import ReactIcono from "./icon/ReactIcono.astro"
 
 const TAGS = {
   NEXT: {
@@ -21,6 +22,11 @@ const TAGS = {
     name: "WordPress",
     class: "bg-white text-black",
     icon: WordpressIcono,
+  },
+  REACT: {
+    name: "React",
+    class: "bg-black text-white",
+    icon: ReactIcono,
   },
 }
 const PROYECTOS = [
@@ -40,6 +46,15 @@ const PROYECTOS = [
     link: "https://agenciaprueba.netlify.app/",
     image: "/proyectos/proyecto2.webp",
     tags: [TAGS.WORDPRESS],
+  },
+  {
+    title: "Administrador de Tareas",
+    description:
+      "Una aplicacion simple para administrar las tareas, se puede agregar y eliminar tareas (no tiene diseño responsive",
+    link: "https://react-adm-tareas.netlify.app/",
+    github: "https://github.com/MauroDordoni/task-manager-react",
+    image: "/proyectos/proyecto3.webp",
+    tags: [TAGS.REACT, TAGS.TAILWIND],
   },
 ]
 ---
